@@ -55,7 +55,6 @@ export default function FruitSelector({ onClose, selectionType }: FruitSelectorP
         <DialogHeader>
           <DialogTitle className="text-xl font-bold">Select a Fruit</DialogTitle>
           <button onClick={handleClose} className="absolute top-4 right-4 text-gray-400 hover:text-white">
-            <X className="h-5 w-5" />
           </button>
         </DialogHeader>
 
