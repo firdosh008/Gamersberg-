@@ -14,7 +14,7 @@ export default function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
 
   return (
-    <nav className="w-full py-3">
+    <nav className="w-full py-1">
       <div className="px-10 mx-auto flex items-center justify-between">
         {/* Desktop Navigation */}
         <div className="hidden md:flex items-center space-x-8">
