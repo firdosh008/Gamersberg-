@@ -43,10 +43,13 @@ export default function Calculator() {
   }
 
   return (
-    <div className="w-full max-w-5xl">
+    <div className="w-full max-w-6xl">
       {/* First Row: Fruit Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8  p-12 rounded-2xl border border-[#1a1a40] ">
-        <div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8  p-12 px-20 rounded-2xl border border-[#1a1a40] ">
+        <div className="border border-[#2e2e5a] rounded-xl shadow-[0px_0px_15px_3px_rgba(14,0,130,0.6)] p-6"
+          style={{
+            background: "linear-gradient(to bottom , rgba(3, 0, 28, 1), rgba(8, 0, 77, 1))",
+          }}>
           <h2 className="text-white text-xl font-light mb-4 text-center">Offer (you)</h2>
           <FruitGrid
             fruits={offerFruits}
@@ -54,7 +57,10 @@ export default function Calculator() {
             onRemove={(fruitId) => handleRemoveFruit("offer", fruitId)}
           />
         </div>
-        <div>
+        <div className="border border-[#2e2e5a] rounded-xl shadow-[0px_0px_15px_3px_rgba(14,0,130,0.6)] p-6"
+          style={{
+            background: "linear-gradient(to bottom , rgba(3, 0, 28, 1), rgba(8, 0, 77, 1))",
+          }}>
           <h2 className="text-white text-xl font-light mb-4 text-center">Request (them)</h2>
           <FruitGrid
             fruits={requestFruits}
@@ -66,7 +72,8 @@ export default function Calculator() {
 
       {/* Second Row: Price, Value Difference, Price */}
       <div className="mt-8 flex justify-around">
-        <div className="bg-[#0c0c2a] rounded-full px-6 py-2 text-white">
+        <div className="rounded-full px-6 py-2 text-white border border-cyan-400"
+          style={{ background: "linear-gradient(180deg, #03001C 0%, #070040 100%)" }}>
           <span className="font-normal">Price : </span>
           <span>{formatNumber(offerPrice)}</span>
         </div>
@@ -74,7 +81,8 @@ export default function Calculator() {
           <InfoIcon className="h-4 w-4 mr-2" />
           <span>Value Differences</span>
         </div>
-        <div className="bg-[#0c0c2a] rounded-full px-6 py-2 text-white">
+        <div className="rounded-full px-6 py-2 text-white border border-cyan-400"
+          style={{ background: "linear-gradient(180deg, #03001C 0%, #070040 100%)" }}>
           <span className="font-normal">Price : </span>
           <span>{formatNumber(requestPrice)}</span>
         </div>
@@ -87,14 +95,16 @@ export default function Calculator() {
 
       {/* Fourth Row: Value, No Items Selected, Value */}
       <div className="mt-4 flex justify-around items-center">
-        <div className="bg-[#0c0c2a] rounded-full px-6 py-2 text-white">
+        <div className="rounded-full px-6 py-2 text-white border border-cyan-400"
+          style={{ background: "linear-gradient(180deg, #03001C 0%, #070040 100%)" }}>
           <span className="font-normal">Value : </span>
           <span>{formatNumber(offerValue)}</span>
         </div>
         {offerFruits.length === 0 && requestFruits.length === 0 && (
           <div className="text-gray-400">no items selected</div>
         )}
-        <div className="bg-[#0c0c2a] rounded-full px-6 py-2 text-white">
+        <div className="rounded-full px-6 py-2 text-white border border-cyan-400"
+          style={{ background: "linear-gradient(180deg, #03001C 0%, #070040 100%)" }}>
           <span className="font-normal">Value : </span>
           <span>{formatNumber(requestValue)}</span>
         </div>
