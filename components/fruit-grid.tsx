@@ -34,17 +34,20 @@ export default function FruitGrid({ fruits, onAddClick, onRemove }: FruitGridPro
             >
               {fruit ? (
                 <>
-                  <div className="flex flex-col items-center justify-center relative z-10 p-20 md:p-0">
-                    <Image
-                      src={fruit.image || "/placeholder.svg"}
-                      alt={fruit.name}
-                      width={60}
-                      height={60}
-                      className="w-full h-full max-w-[80px] max-h-[80px] object-contain"
-                    />
-                    <span className="text-white text-sm font-medium">{fruit.name}</span>
+                  <div className="flex flex-col items-center h-full w-full relative z-10">
+                    <div className="h-5 md:h-full">
+                      <Image
+                        src={fruit.image || "/placeholder.svg"}
+                        alt={fruit.name}
+                        width={60}
+                        height={60}
+                        className="w-full h-full max-w-[80px] max-h-[80px] object-contain"
+                      />
+                      <span className="text-white text-sm md:text-base lg:text-medium">
+                        {fruit.name}
+                      </span>
+                    </div>
                   </div>
-
 
                   <button
                     onClick={() => onRemove(fruit.id)}
