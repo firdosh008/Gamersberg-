@@ -25,9 +25,8 @@ export default function FruitGrid({ fruits, onAddClick, onRemove }: FruitGridPro
           return (
             <div
               key={fruit?.id || `empty-${index}`}
-              className={`relative aspect-[4/3] rounded-lg overflow-hidden flex items-center justify-center transition-all ${
-                isEmptySlot ? "group" : ""
-              }`}
+              className={`relative aspect-[4/3] rounded-lg overflow-hidden flex items-center justify-center transition-all ${isEmptySlot ? "group" : ""
+                }`}
               style={{
                 background: "linear-gradient(to bottom right, rgba(19, 11, 79, 1), rgba(44, 25, 181, 1))",
                 border: isEmptySlot ? "2px solid #15F5BA" : "1px solid rgba(255, 255, 255, 0.2)",
@@ -35,16 +34,18 @@ export default function FruitGrid({ fruits, onAddClick, onRemove }: FruitGridPro
             >
               {fruit ? (
                 <>
-                  <div className="flex flex-col items-center justify-center p-2 relative z-10">
+                  <div className="flex flex-col items-center justify-center relative z-10 p-20 md:p-0">
                     <Image
                       src={fruit.image || "/placeholder.svg"}
                       alt={fruit.name}
                       width={60}
                       height={60}
-                      className="object-contain mb-2"
+                      className="w-full h-full max-w-[80px] max-h-[80px] object-contain"
                     />
                     <span className="text-white text-sm font-medium">{fruit.name}</span>
                   </div>
+
+
                   <button
                     onClick={() => onRemove(fruit.id)}
                     className="absolute top-1 right-1 bg-[#0c0c2a] rounded-full p-1 text-gray-400 hover:text-white z-10"
