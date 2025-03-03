@@ -34,8 +34,7 @@ export default function FruitGrid({ fruits, onAddClick, onRemove }: FruitGridPro
             >
               {fruit ? (
                 <>
-                  <div className="flex flex-col items-center h-full w-full relative z-10">
-                    <div className="h-5 md:h-full">
+                  <div className="flex flex-col items-center justify-center h-full w-full relative z-10">
                       <Image
                         src={fruit.image || "/placeholder.svg"}
                         alt={fruit.name}
@@ -47,7 +46,6 @@ export default function FruitGrid({ fruits, onAddClick, onRemove }: FruitGridPro
                         {fruit.name}
                       </span>
                     </div>
-                  </div>
 
                   <button
                     onClick={() => onRemove(fruit.id)}

@@ -45,7 +45,7 @@ export default function Calculator() {
   return (
     <div className="w-full max-w-6xl">
       {/* First Row: Fruit Grid */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12 px-20 rounded-2xl border border-[#1a1a40]">
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-8 p-12 px-5 md:px-20 rounded-2xl border border-[#1a1a40]">
         <div className="border border-[#2e2e5a] rounded-xl shadow-[0px_0px_15px_3px_rgba(14,0,130,0.6)] p-6"
           style={{
             background: "linear-gradient(to bottom , rgba(3, 0, 28, 1), rgba(8, 0, 77, 1))",
